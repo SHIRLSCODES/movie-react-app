@@ -14,7 +14,7 @@ const API_OPTIONS = {
   method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhYjE2OGNkYTg0NjkxMjdiNmExMWNkMmE5YWFhNDgwZCIsIm5iZiI6MTc1NDQ2ODU1Ny4xODksInN1YiI6IjY4OTMxMGNkNTdhMDgwZTg3Zjk5MThjZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.pnK6vUtNjWC9Ia8hOV6SCDmjgpsG1ftDuWjMixgmovA',
+    Authorization: `Bearer ${API_KEY}`,
   }
 }
 
@@ -24,7 +24,7 @@ const App = () => {
 
   const [movieList, setMovieList] = useState([]);
   const [trendingMovies, setTrendingMovies] = useState([]);
-  
+
   const [isLoading, setIsLoading] = useState(false);
   // Debounce the search term to avoid too many API calls
   const [debouncedSearchTerm, setDebouncedSearchTerm] = useState('');
